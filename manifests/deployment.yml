@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: aleksalonsopipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aleksalonsopipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: aleksalonsopipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: aleksalonsopipelinesjavascriptdocker 
+          image: containerregistrymodulo7.azurecr.io/aleksalonsopipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
